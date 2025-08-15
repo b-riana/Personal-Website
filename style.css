@@ -1,0 +1,225 @@
+*{ /*resets settings*/
+    box-sizing: border-box; /*makes sure boxes are not changes by padding*/
+    margin: 0;
+    padding: 0;
+
+}
+
+/*creates variables*/
+:root {
+    --bg-color: #02324F;
+    --light: #DBE5E6;
+    --grey-color: #4C596B;
+}
+
+body {
+    font-family: 'Zain', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background: var(--bg-color);
+    overflow-x: hidden;
+    color: var(--light);
+}
+
+a {
+    text-decoration: none; /*removes underline*/
+    color: var(--light);
+}
+
+ul { /*unordered lists*/
+    list-style: none; /*removes bullets*/
+}
+
+img {
+    max-width: 100%; /* prevents imgs from breaking out of divs*/
+
+}
+
+/* NAVBAR */
+.navbar {
+    padding: 15px;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .main-menu ul {
+    display: flex;
+}
+
+.navbar ul li a {
+    padding: 10px 15px;
+    display: block;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.navbar ul li a:hover {
+    color: var(--grey-color);
+}
+
+/* HERO */
+.hero .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .links ul{
+    display: flex;
+    justify-content: center;
+}
+
+/* Projects */
+
+.project .card {
+    display: flex;
+
+    background-color: var(--grey-color);
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding: 20px 20px 0px 20px;
+}
+
+.project a {
+    flex-grow: 1;
+}
+
+.project .project-text .project-heading {
+    margin-top: 20px;
+    justify-self: center;
+}
+
+.project p {
+    margin-bottom: 15px;
+}
+
+.project .project-text ul li {
+    list-style-type: disc;
+    margin-left: 25px;
+    text-decoration: underline;
+}
+
+/* ABOUT ME */
+.about-me .container {
+    display: flex;
+    gap: 50px;
+    padding: 0 0 30px 30px;
+}
+
+.about-me .intro-content {
+    margin-top: 140px;
+    max-width: 50%;
+}
+
+/* HAMBURGER BUTTON */
+.hamburger-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000; /*high num brings to front*/
+}
+
+.hamburger-button .hamburger-line{
+    width: 30px;
+    height: 3px;
+    background: var(--light);
+    margin: 6px 0;
+}
+
+/* MOBILE MENUE */
+.mobile-menu{
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 100%;
+    z-index: 100;
+    background: var(--grey-color);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    transition: right 0.3 s ease-in-out;
+}
+
+.mobile-menu.active{
+    right: 0;
+}
+
+.mobile-menu ul{
+    margin-top: 100px;
+    padding-right: 10px;
+
+}
+
+.mobile-menu ul li{
+    margin: 10p 0;
+    padding-left: 10px;
+}
+
+.mobile-menu ul li a{
+    font-size: 20px;
+    transition: 0.3s
+}
+
+/* UTILITY CLASSES*/
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto; /*first num is top-bottom, second is for left-right*/
+    padding: 0 15px;
+}
+
+
+/* TEXT */
+
+.text-bold{
+    font-weight: bold;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 800px){
+
+    /* Changes navbar to hamburger menu */
+    .navbar .main-menu{
+        display: none
+    }
+
+    .navbar .hamburger-button{
+        display: block;
+    }
+
+    /* Adjusts project layout */
+    .project .card {
+        flex-direction: column;
+    }
+
+    .project img {
+        max-width: 90%;
+        padding-left: 15%; /* trying to center it */
+    }
+
+    .project .project-text{
+        padding-bottom: 20px;
+
+    }
+    .project .project-text .project-heading{
+        margin-top: 0px;
+        justify-self: center;
+    }
+
+    /* Adjusts All About Me section */
+    .about-me .container{
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+
+    .about-me .intro-content {
+    margin-top: 0px;
+    max-width: 90%;
+    }
+
+}
