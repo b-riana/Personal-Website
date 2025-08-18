@@ -45,6 +45,11 @@ img {
     align-items: center;
 }
 
+.navbar .container img{
+    width: 5%;
+    margin: 10px 0;
+}
+
 .navbar .main-menu ul {
     display: flex;
 }
@@ -53,6 +58,7 @@ img {
     padding: 10px 15px;
     display: block;
     font-weight: 600;
+    font-size: 18px;
     transition: 0.5s;
 }
 
@@ -63,13 +69,14 @@ img {
 /*Background */
 .vanta-bg {
         max-width: 1500px;
-        height: 1500px; /* Example: Full viewport height */
+        height: 900px; /* Example: Full viewport height */
 }
 
 /* HERO */
 
 .hero .container-wide {
     position: relative;
+    height: 900px;
 }
 
 .hero .container-wide .hero-content{
@@ -84,13 +91,14 @@ img {
 
 .hero .container-wide .vanta-bg {
     z-index: 1;
+    max-height: 900px;
 }
 
 .hero img{
     display: block;
     justify-self: center;
     align-items: center;
-    max-width: 30%;
+    max-width: 25%;
     height: auto;
     margin-bottom: 30px;
     margin-top: 80px;
@@ -241,7 +249,12 @@ img {
 }
 
 /* MEDIA QUERIES */
-@media (max-width: 800px){
+@media (max-width: 900px){
+
+    .navbar .container h1{
+        font-size: 18px;
+    }
+
 
     /* Changes navbar to hamburger menu */
     .navbar .main-menu{
