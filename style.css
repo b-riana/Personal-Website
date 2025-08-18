@@ -32,7 +32,6 @@ ul { /*unordered lists*/
 
 img {
     max-width: 100%; /* prevents imgs from breaking out of divs*/
-
 }
 
 /* NAVBAR */
@@ -61,11 +60,40 @@ img {
     color: var(--grey-color);
 }
 
+/*Background */
+.vanta-bg {
+        max-width: 1500px;
+        height: 1500px; /* Example: Full viewport height */
+}
+
 /* HERO */
-.hero .container{
-    display: flex;
+
+.hero .container-wide {
+    position: relative;
+}
+
+.hero .container-wide .hero-content{
+    position: absolute; /* Takes the element out of the normal flow */
     justify-content: center;
+    top: 0; /* Adjust as needed for specific placement */
+    left: 0; /* Adjust as needed for specific placement */
+    width: 100%; /* Or specific width */
+    height: 100%; /* Or specific height */
+    z-index: 2; /* Higher z-index brings it forward */
+}
+
+.hero .container-wide .vanta-bg {
+    z-index: 1;
+}
+
+.hero img{
+    display: block;
+    justify-self: center;
     align-items: center;
+    max-width: 30%;
+    height: auto;
+    margin-bottom: 30px;
+    margin-top: 80px;
 }
 
 .hero .links ul{
@@ -73,11 +101,35 @@ img {
     justify-content: center;
 }
 
+/* Filter */
+
+
+.filter .types {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.filter .type{
+    background: var(--light);
+    color: var(--bg-color);
+    border-radius: 10px;
+    align-content: center;
+    justify-items: center;
+    padding: 10px;
+    margin: 0px 5px;
+    cursor: pointer;
+}
+
+.filter .active{
+    background: var(--grey-color);
+    color: var(--light);
+}
+
 /* Projects */
+/*Project filter control*/
 
 .project .card {
     display: flex;
-
     background-color: var(--grey-color);
     border-radius: 10px;
     margin-bottom: 30px;
@@ -102,6 +154,12 @@ img {
     margin-left: 25px;
     text-decoration: underline;
 }
+
+.project .card .active{
+    display: none;
+}
+
+
 
 /* ABOUT ME */
 .about-me .container {
@@ -164,6 +222,8 @@ img {
     font-size: 20px;
     transition: 0.3s
 }
+
+
 
 /* UTILITY CLASSES*/
 
