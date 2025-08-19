@@ -68,7 +68,7 @@ img {
 
 /*Background */
 .vanta-bg {
-        max-width: 1500px;
+        max-width: 1800px;
         height: 900px; /* Example: Full viewport height */
 }
 
@@ -167,6 +167,27 @@ img {
     display: none;
 }
 
+.project .card .tags {
+    margin-top: 60px;
+    display: flex;
+    padding: 10px;
+}
+
+.project .card .tags ul{
+    display: flex;
+}
+
+.project .card .tags li{
+    list-style-type: none;
+    margin-left: 25px;
+    margin-top: 0;
+    text-decoration: none;
+    font-weight: bold;
+    background: var(--light);
+    color: var(--bg-color);
+    border-radius: 10px;
+    padding: 5px 10px;
+}
 
 
 /* ABOUT ME */
@@ -265,6 +286,12 @@ img {
         display: block;
     }
 
+    /* Adjusts homepage*/
+
+    .hero .hero-content img{
+        max-width: 40%;
+    }
+
     /* Adjusts project layout */
     .project .card {
         flex-direction: column;
@@ -294,5 +321,139 @@ img {
     margin-top: 0px;
     max-width: 90%;
     }
+}
 
+@media (max-width: 500px){
+
+    .navbar .container h1{
+        font-size: 18px;
+    }
+
+    /* Changes navbar to hamburger menu */
+    .navbar .main-menu{
+        display: none
+    }
+
+    .navbar .hamburger-button{
+        display: block;
+    }
+
+    .hamburger-button .hamburger-line{
+        width: 20px;
+        margin: 4px 0;
+    }
+
+    /* Adjusts home page */
+    .hero .hero-content{
+        align-content: baseline;
+        padding:0;
+    }
+
+    .hero .hero-content img{
+        max-width: 50%;
+    }
+
+    .hero .hero-content .links{
+        font-size: 13px;
+    }
+
+    /* Adjusts project layout */
+    .project .card {
+        flex-direction: column;
+    }
+
+    .project img {
+        max-width: 90%;
+        padding-left: 15%; /* trying to center it */
+    }
+
+    .project .project-text{
+        padding-bottom: 20px;
+
+    }
+    .project .project-text .project-heading{
+        margin-top: 0px;
+        justify-self: center;
+    }
+
+    /* Adjusts All About Me section */
+    .about-me .container{
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+
+    .about-me .intro-content {
+    margin-top: 0px;
+    max-width: 90%;
+    }
+}
+
+@media (max-width: 300px){
+
+    .navbar .container{
+        padding-left: 0px;
+    }
+
+    .navbar .container h1{
+        font-size: 12px;
+        margin-right: 30px;
+    }
+
+    /* Changes navbar to hamburger menu */
+    .navbar .main-menu{
+        display: none;
+    }
+
+    .navbar .hamburger-button{
+        display: block;
+    }
+
+    .hamburger-button .hamburger-line{
+        width: 20px;
+        margin: 4px 0;
+    }
+
+    /* Adjusts home page */
+    .hero .hero-content{
+        align-content: baseline;
+        padding:0;
+    }
+
+    .hero .hero-content img{
+        max-width: 60%;
+    }
+
+    .hero .hero-content .links{
+        font-size: 10px;
+    }
+
+    /* Adjusts project layout */
+    .project .card {
+        flex-direction: column;
+    }
+
+    .project img {
+        max-width: 90%;
+        padding-left: 15%; /* trying to center it */
+    }
+
+    .project .project-text{
+        padding-bottom: 20px;
+
+    }
+    .project .project-text .project-heading{
+        margin-top: 0px;
+        justify-self: center;
+    }
+
+    /* Adjusts All About Me section */
+    .about-me .container{
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+
+    .about-me .intro-content {
+    margin-top: 0px;
+    max-width: 90%;
+    }
 }
