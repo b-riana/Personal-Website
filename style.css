@@ -63,13 +63,7 @@ img {
 }
 
 .navbar ul li a:hover {
-    color: var(--grey-color);
-}
-
-/*Background */
-.vanta-bg {
-        max-width: 1800px;
-        height: 900px; /* Example: Full viewport height */
+    color: var(--bg-color);
 }
 
 /* HERO */
@@ -89,19 +83,22 @@ img {
     z-index: 2; /* Higher z-index brings it forward */
 }
 
-.hero .container-wide .vanta-bg {
-    z-index: 1;
-    max-height: 900px;
-}
-
 .hero img{
     display: block;
     justify-self: center;
     align-items: center;
-    max-width: 25%;
-    height: auto;
+    max-width: 100%;
     margin-bottom: 30px;
     margin-top: 80px;
+}
+
+.hero .hero-text{
+    display: block;
+    justify-self: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-family: 'Zain', sans-serif;
+    font-display: bold;
 }
 
 .hero .links ul{
@@ -170,23 +167,31 @@ img {
 .project .card .tags {
     margin-top: 60px;
     display: flex;
-    padding: 10px;
+
+    max-width: 100%;
 }
 
 .project .card .tags ul{
     display: flex;
+    flex-wrap: wrap;
+
+    max-width: 100%;
 }
 
 .project .card .tags li{
     list-style-type: none;
-    margin-left: 25px;
+    margin-left: 20px;
     margin-top: 0;
+    margin-bottom: 10px;
     text-decoration: none;
     font-weight: bold;
     background: var(--light);
     color: var(--bg-color);
     border-radius: 10px;
     padding: 5px 10px;
+    align-content: center;
+    max-width: 100%;
+
 }
 
 
@@ -198,8 +203,25 @@ img {
 }
 
 .about-me .intro-content {
-    margin-top: 140px;
+    margin-top: 250px;
+    padding:0;
+    margin-bottom:0;
     max-width: 50%;
+}
+
+.about-me .container .history .docs {
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.about-me .container .history h2{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.about-me .container .history .education .institute{
+    margin-left: 20px;
+    margin-bottom: 10px;
 }
 
 /* HAMBURGER BUTTON */
@@ -253,7 +275,6 @@ img {
 }
 
 
-
 /* UTILITY CLASSES*/
 
 .container {
@@ -276,7 +297,6 @@ img {
         font-size: 18px;
     }
 
-
     /* Changes navbar to hamburger menu */
     .navbar .main-menu{
         display: none
@@ -292,6 +312,10 @@ img {
         max-width: 40%;
     }
 
+    .hero .hero-content .hero-text{
+        font-size: 18px;
+    }
+
     /* Adjusts project layout */
     .project .card {
         flex-direction: column;
@@ -304,8 +328,8 @@ img {
 
     .project .project-text{
         padding-bottom: 20px;
-
     }
+
     .project .project-text .project-heading{
         margin-top: 0px;
         justify-self: center;
@@ -318,8 +342,8 @@ img {
     }
 
     .about-me .intro-content {
-    margin-top: 0px;
-    max-width: 90%;
+        margin-top: 0px;
+        max-width: 90%;
     }
 }
 
