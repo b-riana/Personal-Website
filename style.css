@@ -14,7 +14,7 @@
 
 body {
     font-family: 'Zain', sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.5;
     background: var(--bg-color);
     overflow-x: hidden;
@@ -164,11 +164,23 @@ img {
     display: none;
 }
 
+.card .display-img {
+    width: 70%;
+}
+
+.card .display-img .poster {
+    width: 70%;
+    height: auto;
+    display: block;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
 .project .card .tags {
     margin-top: 60px;
     display: flex;
-
     max-width: 100%;
+    margin-bottom: 15px;
 }
 
 .project .card .tags ul{
@@ -313,7 +325,7 @@ img {
     }
 
     .hero .hero-content .hero-text{
-        font-size: 18px;
+        font-size: 90%;
     }
 
     /* Adjusts project layout */
@@ -324,6 +336,10 @@ img {
     .project img {
         max-width: 90%;
         padding-left: 15%; /* trying to center it */
+    }
+
+    .card .display-img .poster {
+        width: 90%;
     }
 
     .project .project-text{
@@ -377,6 +393,11 @@ img {
         max-width: 50%;
     }
 
+    .hero .hero-content .hero-text{
+        font-size: 80%;
+        margin-left: 5px;
+    }
+
     .hero .hero-content .links{
         font-size: 13px;
     }
@@ -387,14 +408,16 @@ img {
     }
 
     .project img {
-        max-width: 90%;
+        max-width: 50%;
         padding-left: 15%; /* trying to center it */
+        display: block;
     }
+
 
     .project .project-text{
         padding-bottom: 20px;
-
     }
+
     .project .project-text .project-heading{
         margin-top: 0px;
         justify-self: center;
@@ -447,6 +470,11 @@ img {
         max-width: 60%;
     }
 
+    .hero .hero-content .hero-text{
+        font-size: 70%;
+        margin-left: 10px;
+    }
+
     .hero .hero-content .links{
         font-size: 10px;
     }
@@ -456,15 +484,22 @@ img {
         flex-direction: column;
     }
 
+    .project img .poster{
+        width: 200px;
+        height: auto;
+    }
+
     .project img {
         max-width: 90%;
         padding-left: 15%; /* trying to center it */
     }
 
+    
     .project .project-text{
         padding-bottom: 20px;
 
     }
+
     .project .project-text .project-heading{
         margin-top: 0px;
         justify-self: center;
@@ -481,3 +516,4 @@ img {
     max-width: 90%;
     }
 }
+
