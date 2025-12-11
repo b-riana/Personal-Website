@@ -1,0 +1,252 @@
+*{ /*resets settings*/
+    box-sizing: border-box; /*makes sure boxes are not changes by padding*/
+    margin: 0;
+    padding: 0;
+
+}
+
+/*creates variables*/
+:root {
+    --bg-color: #F9F7F3;
+    --light: #DBE5E6;
+    --grey-color: #4C596B;
+    --font-dark: #05003D;
+}
+
+body, button {
+    font-family: 'Jacques Francois', sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    background: var(--bg-color);
+    overflow-x: hidden;
+    color: var(--font-dark);
+}
+
+a {
+    text-decoration: none; /*removes underline*/
+    color: var(--font-dark);
+}
+
+ul { /*unordered lists*/
+    list-style: none; /*removes bullets*/
+}
+
+li { /*unordered lists*/
+    list-style: none; /*removes bullets*/
+}
+
+img {
+    max-width: 100%; /* prevents imgs from breaking out of divs*/
+}
+
+/* UTILITY CLASSES*/
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto; /*first num is top-bottom, second is for left-right*/
+    padding: 0 15px;
+}
+.container-wide {
+    max-width: 1400px;
+    margin: 0 auto; /*first num is top-bottom, second is for left-right*/
+    padding: 0 15px;
+}
+
+
+/* TEXT */
+
+.text-bold{
+    font-weight: bold;
+}
+
+
+/* Navbar */
+.navbar .container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 10px 20px;
+    height: 80px;
+}
+
+.navbar .container .main-menu {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    flex:1;
+    justify-content: flex-end;
+
+}
+
+.navbar .container .main-menu ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 16px;
+}
+
+
+.navbar .container .main-menu li { /*Adds space b/n eng and cs*/
+    margin-right: 20px;
+    transition: 0.5s;
+    padding-top: 10px;
+
+}
+
+.navbar .container .main-menu li a:hover { /*Adds space b/n eng and cs*/
+    color: var(--grey-color);
+}
+
+
+/* HAMBURGER BUTTON */
+.hamburger-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000; /*high num brings to front*/
+}
+
+.hamburger-button .hamburger-line{
+    width: 30px;
+    height: 3px;
+    background: var(--font-dark);
+    margin: 6px 0;
+}
+
+/* MOBILE MENUE */
+.mobile-menu{
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 100%;
+    z-index: 100;
+    background: var(--grey-color);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    transition: right 0.3 s ease-in-out;
+    padding-left: 20px;
+}
+
+.mobile-menu ul li a{
+    color: var(--light);
+}
+
+.mobile-menu.active{
+    right: 0;
+}
+
+.mobile-menu ul{
+    margin-top: 100px;
+    padding-right: 10px;
+
+}
+
+.mobile-menu ul li{
+    margin: 10p 0;
+    padding-left: 10px;
+}
+
+.mobile-menu ul li a{
+    font-size: 20px;
+    transition: 0.3s
+}
+
+
+/* HERO */
+
+.hero .container-wide .card {
+    display: flex;
+    padding: 15px;
+    margin-top: 10px;
+    background-color: #05003D;
+    color: var(--light);
+    justify-content: space-between;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.hero .container-wide .card .proj_img{
+    max-width: 40%;
+    margin-right: 25px;
+    display: flex;
+    align-self: center;
+}
+.hero .container-wide .card .proj_description{
+    padding: 15px;
+}
+
+.hero .container-wide .card .proj_description h2{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.hero .container-wide .card .proj_description ul li{
+    list-style:disc;
+}
+
+
+
+/* MEDIA QUERIES */
+@media (max-width: 900px){
+
+    /* Changes navbar to hamburger menu */
+    .navbar .main-menu {
+        display: none
+    }
+    .navbar .main-menu ul li{
+        display: none
+    }
+
+    .navbar .hamburger-button{
+        display: block;
+    }
+}
+
+@media (max-width: 700px){
+
+    .navbar h2{
+        font-size: 20px;
+    }
+    /* Changes navbar to hamburger menu */
+    .navbar .main-menu{
+        display: none
+    }
+
+    .navbar .main-menu ul li{
+        display: none
+    }
+
+    .navbar .hamburger-button{
+        display: block;
+    }
+
+    .hamburger-button .hamburger-line{
+        width: 20px;
+        margin: 4px 0;
+    }
+
+    .card{
+        flex-direction: column;
+    }
+    .card .proj_description{
+        font-size: 90%;
+        margin-top: 20px;
+        
+        max-width: 90%;
+    }
+
+    .card .proj_img{
+        margin-right: 0px;
+        max-width: 95%;
+        display: flex;
+        align-items: center;
+    }
+    .card .proj_img img{
+        margin-right: 0px;
+        max-width: 95%;
+        align-self: center;
+    }
+}

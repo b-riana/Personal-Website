@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles/home_page.css"/>
+    <link rel="stylesheet" href="styles/eng.css"/>
     <link rel="shorcut icon" href="images/favicon.ico" type="image/x-icon" />
 
 </head>
@@ -19,7 +19,7 @@
     <!-- NAVBAR -->
     <nav class="navbar">
         <div class="container">
-            <h2>Briana Rosado</a></h2>
+            <h2><a href="index.html">Briana Rosado</a></h2>
             <!-- <p><a href="projects.html"></a>Engineering</p>
             <p ><a href="projects.html"></a>Computer Science</p> -->
             <div class="main-menu">
@@ -38,7 +38,7 @@
                                 </a>
                             </li>
                 </ul>
-                
+
             </div>
             <!-- HAMBURGER BUTTON -->
              <button class="hamburger-button">
@@ -51,6 +51,18 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="eng.html">Engineering Works</a></li>
                     <li><a href="cs.html">CS Works</a></li>
+                    <div class="links">
+                        <li>
+                                <a href="https://www.linkedin.com/in/briana-rosado" target="_blank">
+                                    <i class="fab fa-linkedin fa-3x"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/b-riana" target="_blank">
+                                    <i class="fab fa-github fa-3x"></i>
+                                </a>
+                            </li>
+                    </div>
                 </ul>
              </div>
         </div>
@@ -59,21 +71,32 @@
     <!-- HERO -->
     <section class="hero">
         <div class="container-wide">
-            <div class="bio">
-                <img src="images/me/editHea.png" alt="">
-                <div class="bio_text">
-                    <h2>My name is Briana Rosado.</h2>
-                    <p>Sophomore Computer Engineer @ The University of Maryland '28.</p>
-                    <button><a href="mailto:b.rosado.work@gmail.com">Contact Me</a></button>
-                    <div class="line">
-
-                    </div>
+            <div class="card">
+                <div class="proj_img">
+                    <img src="images/otv.png" alt="">
+                </div>
+                <div class="proj_description">
+                    <h2>Fire-Suppression Vehicle</h2>
+                    <ul>
+                        <li>Led a team of 7 engineers over the course of 15 weeks to design an Over-the-Terrain-Vehicle (OTV).</li>
+                    </ul>
+                    
                 </div>
             </div>
-            <!-- <div class="interests">
-                <h4>Interests</h4>
-                <p>As a computer engineer, I am interested in both digital logic design and coding. I am the Equipment Manager on the UMD Women's Rowing club.</p>
-            </div> -->
+            <div class="card">
+                <div class="proj_img">
+                    <img src="images/butterworth.png" alt="">
+                </div>
+                <div class="proj_description">
+                    <h2>3rd Order Butterworth Filter</h2>
+                    <ul>
+                        <li>Constructed a 3rd Order Butterworth Filter using an LM741 op-amp, resistors, and capacitors.</li>
+                        <li>Performed an AC frequency sweep from 1Hz to 10MHz to calculate the transfer function and turn-off frequency.</li>
+                        <li>Compiled data to create Bode Plots for post-experiment analysis.</li>
+                        <li>Simulated circuit in PSpice to compare ideal behavior</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
