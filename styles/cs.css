@@ -22,6 +22,10 @@ body, button {
     color: var(--font-dark);
 }
 
+body{
+    padding-top: 80px;
+}
+
 a {
     text-decoration: none; /*removes underline*/
     color: var(--font-dark);
@@ -61,6 +65,16 @@ img {
 
 
 /* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;  /* keep it above page content */
+    background-color: #F9F7F3;
+    
+}
+
 .navbar .container{
     display: flex;
     justify-content: space-between;
